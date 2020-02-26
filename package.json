@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node --max_old_space_size=10240",
+    "build": "node --max_old_space_size=8142",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -85,7 +85,7 @@
     "typescript": "~3.5.3"
   },
   "engines": {
-    "node": "v10.16.0",
+    "node": "v12.16.0",
     "npm": "6.9.0"
   }
 }
