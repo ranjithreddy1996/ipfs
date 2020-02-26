@@ -1,0 +1,12 @@
+.serviceNavItems{
+    margin-right: 90px;
+  } 
+  .serviceNavItems.active {
+    color: #512da8;
+    font-size: larger;
+    border: 2px solid #512da8;
+    border-right-style: none;
+    border-top-style: none;
+    border-left-style: none;
+    cursor: pointer;
+  }  

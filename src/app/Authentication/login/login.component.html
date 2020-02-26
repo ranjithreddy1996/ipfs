@@ -1,0 +1,94 @@
+<!-- Root -->
+<div class="Background_image">
+
+    <div class="dt-root">
+        <div class="dt-root__inner" style="    margin-top: 95px;">
+
+            <!-- Login Container -->
+                <!-- Login Content -->
+                <div class="dt-login__content-wrapper">
+                    <!-- Login Content Section -->
+                    <div class="dt-login__content" style="width:100%;background-color: rgba(181, 211, 206, 0.719);">
+
+                        <!-- Login Content Inner -->
+                        <div class="dt-login__content-inner" style="margin-top: -25px;">
+                            <h1 style="text-align: center;">Login</h1>
+
+                            <!-- Form -->
+                            <form #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onSubmit(user)">
+                                <h3 class="text-danger">{{this.error}}</h3>
+
+                                <!-- Form Group -->
+                                <div class="form-group">
+                                    <label for="email-1">User ID</label>
+                                    <input type="email" class="form-control" id="email-1" aria-describedby="email-1"
+                                        [(ngModel)]="user.email" #email="ngModel" [ngModelOptions]="{standalone: true}"
+                                        [ngClass]="{'is-invalid': loginForm.submitted && email.invalid}"
+                                        placeholder="User ID" required />
+                                    <div class="invalid-feedback" *ngIf="loginForm.submitted && email.invalid">
+                                        <div *ngIf="email.errors.required">User ID Required</div>
+                                    </div>
+                                </div>
+                                <!-- /form group -->
+
+                                <!-- Form Group -->
+                                <div class="form-group">
+                                    <label for="password-1">Password</label>
+                                    <input type="password" class="form-control" id="password-1"
+                                        [(ngModel)]="user.password" #password="ngModel"
+                                        [ngModelOptions]="{standalone: true}"
+                                        [ngClass]="{'is-invalid': loginForm.submitted && password.invalid}"
+                                        placeholder="Password" required />
+                                    <div class="invalid-feedback" *ngIf="loginForm.submitted && password.invalid">
+                                        <div *ngIf="password.errors.required">Password is Required</div>
+                                    </div>
+                                </div>
+                                <!-- /form group -->
+
+                                <!-- Form Group -->
+                                <div class="dt-checkbox d-block mb-6">
+                                    <input type="checkbox" id="checkbox-1">
+                                    <label class="dt-checkbox-content" for="checkbox-1">
+                                        Keep me login on this device
+                                    </label>
+                                </div>
+                                <!-- /form group -->
+
+                                <!-- Form Group -->
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary text-uppercase">Login</button>
+                                    <span class="d-inline-block ml-4">Or
+                                        <a id=hover class="d-inline-block font-weight-500 ml-3" (click)="link()">Create
+                                            New
+                                            Account</a>
+                                    </span>
+                                </div>
+                                <!-- /form group -->
+
+                         
+
+
+                            </form>
+                            <!-- /form -->
+
+                        </div>
+                        <!-- /login content inner -->
+
+
+                    </div>
+                    <!-- /login content section -->
+
+                </div>
+                <!-- /login content -->
+
+            <!-- /login container -->
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium" type="ball-spin-clockwise">  
+    <p style="color: white">Please Wait. </p>  
+    </ngx-spinner>
+</div>

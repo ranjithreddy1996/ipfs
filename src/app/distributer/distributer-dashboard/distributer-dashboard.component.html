@@ -1,0 +1,190 @@
+
+<!-- Root -->
+<div class="card">
+    <div class="card-body">
+        <h1>Dashboard</h1>
+            <!-- dashboard -->
+            <div class="clearfix">&nbsp;</div>
+                <div class="row">
+                    <div class="col-4">
+                                <div class="card card1 card-stats py-3"id="new" >
+                                          <div class="card-body">
+                                            <div class="row">
+                                              <div class="col-3">
+                                                <div class="info-icon text-center icon-primary">
+                                                    <!-- <img src="../../../assets/colleges.png" class="top_card_logo"> -->
+                                                </div>
+                                              </div>
+                                              <div class="col-9">
+                                                <div class="numbers">
+                                                  <p class="card-category">No. of Retailer</p>
+                                                  <h3 id="newblock" class="card-title" >{{this.retailer}}</h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer">
+                                                <i class="fa fa-list-ul mr-md-2"></i> Retailer
+                                                <span id="latestblocktime" class="stats" >
+                                            </span>
+                                          </div>
+                                </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card card1 card-stats py-3"id="new" >
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-3">
+                                  <div class="info-icon text-center icon-primary">
+                                      <!-- <img src="../../../assets/studentsImagelogo.png" class="top_card_logo"> -->
+                                  </div>
+                                </div>
+                                <div class="col-9">
+                                  <div class="numbers">
+                                    <p class="card-category">Total Products</p>
+                                    <h3 id="newblock" class="card-title">{{this.dproduct}}</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-footer">
+                                    <i class="fa fa-list-ul mr-md-2"></i> Products
+                                    <span id="latestblocktime" class="stats" >
+                              </span>
+                            </div>
+                  </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card card1 card-stats py-3"id="new" >
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-3">
+                                  <div class="info-icon text-center icon-primary">
+                                        <!-- <img src="../../../assets/employeee.png" class="top_card_logo"> -->
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                  <div class="numbers">
+                                    <p class="card-category">No. of Approved</p>
+                                    <h3 id="newblock" class="card-title">{{this.mapporved}}</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-footer">
+                                    <i class="fa fa-list-ul mr-md-2"></i> Approved
+                                    <span id="latestblocktime" class="stats" >
+                              </span>
+                            </div>
+                  </div>
+                    </div>
+            </div>
+  
+            <!-- second Dashboard -->
+            <!-- <div class="clearfix">&nbsp;</div> -->
+            <div class="row">
+                <div class="col-4">
+                            <div class="card card1 card-stats py-3"id="new" >
+                                      <div class="card-body">
+                                        <div class="row">
+                                          <div class="col-3">
+                                            <div class="info-icon text-center icon-primary">
+                                              <!-- <img src="../../../assets/certificateIcons.png" class="image_resize"> -->
+                                            </div>
+                                          </div>
+                                          <div class="col-9">
+                                            <div class="numbers">
+                                              <p class="card-category">No. of Rejected</p>
+                                              <h3 id="newblock" class="card-title">{{this.mrejected}}</h3>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="card-footer">
+                                            <i class="fa fa-globe mr-md-2"></i> Rejected
+                                            <span id="latestblocktime" class="stats" >
+                                        </span>
+                                      </div>
+                            </div>
+                </div>
+                <div class="col-4">
+                  <div class="card card1 card-stats py-3" id="new">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-3">
+                                  <div class="info-icon text-center icon-primary">
+                                    <!-- <img src="../../../assets/certificateIcons.png" class="image_resize"> -->
+                                  </div>
+                                </div>
+                                <div class="col-9">
+                                  <div class="numbers">
+                                    <p class="card-category">No. of Requests</p>
+                                    <h3 id="newblock" class="card-title">{{this.mrequests}}</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-footer">
+                                  <i class="fa fa-globe mr-md-2"></i> Requests
+                                  <span id="latestblocktime" class="stats" >
+                              </span>
+                            </div>
+                  </div>
+      </div>
+                
+        </div>
+                           
+  <!-- dashboard and chart -->
+  <div class="card ">
+    <div class="header_of_Card m-md-4">Graph anyalisis</div>
+    <div class="row p-3">
+        <div class="col-md-7 pr-0">
+            <!-- <div style="display: block; width: 102%;">
+                <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="mbarChartLabels"
+                        [options]="barChartOptions"
+                        [colors]="barChartColors"
+                        [chartType]="barChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div> -->
+        </div>
+        <div class="col-md-5"id="new">
+            <div class="card card_width">
+                <div class="card-header background_card_image">
+                </div>
+                <div class="card-body image_center pl-0 pr-0">
+                    <img style="width: 54%;margin-left: 22%; margin-top: -5%;" src="../../../assets/userImage.jpg" class="image_radius_change ">
+                    <table class="table_center">
+                       <tbody>
+                                                     <tr>
+                                <td class="margin_l">Distributer Id </td>
+                                <td class="pl-2">: {{this.distributerid}}</td>
+                               
+                            </tr>
+                            <tr>
+                              <td class="margin_l">Distributer Mobie Number </td>
+                              <td class="pl-2">: {{this.distributerid}}</td>
+                             
+                          </tr>
+                       </tbody>
+                    </table>
+                   
+                </div>
+                <div class="card-footer color1">
+                    <!-- <div class="text-center">{{uniname}}</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+    </div>
+  </div>
+  
+  
+  
+  
+    <!-- /root -->

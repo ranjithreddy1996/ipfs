@@ -1,0 +1,62 @@
+.d-inline-block:hover{
+  color: #512da8;
+} 
+
+  .Background_image{
+    /* background-color: aliceblu */
+    background: url(../../../assets/bc.png);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.dt-login__content-wrapper {
+  height: 374;
+  WIDTH: 553px;
+}
+
+
+
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div.background {
+  background: url(../../../assets/bc.png);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}

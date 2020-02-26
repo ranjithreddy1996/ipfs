@@ -1,0 +1,78 @@
+<!--first row-->
+<div class="clearfix">&nbsp;</div>
+<div class="card rows">
+    <div class="card-body">
+        <div class="clearfix">&nbsp;</div>
+        <div class="row rows">
+            <div class="col-md-4">
+                <h1>Transactions</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <!-- <input type="text" [(ngModel)]="searchText" class="form-control btn-radius"
+                        placeholder="Search By category"> -->
+                </div>
+            </div>
+        </div>
+       
+        <div class="clearfix">&nbsp;</div>
+        <div class="clearfix">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+
+                    <table class="table table-striped" [mfData]="supplier" #gf="mfDataTable" [mfRowsOnPage]="10">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%">
+                                    <mfDefaultSorter by="name">S.No</mfDefaultSorter>
+                                </th>
+                                <th style="width: 15%">
+                                    <mfDefaultSorter by="email">Transaction Name </mfDefaultSorter>
+                                </th>
+                                <th style="width: 20%">
+                                    <mfDefaultSorter by="age">Supplier Id</mfDefaultSorter>
+                                </th>
+                                <th style="width: 20%">
+                                    <mfDefaultSorter by="city">Company Name</mfDefaultSorter>
+                                </th>
+                                <th style="width: 20%">
+                                    <mfDefaultSorter by="city">Issued By</mfDefaultSorter>
+                                </th>
+                                <th style="width: 20%">
+                                    <mfDefaultSorter by="city">Block No</mfDefaultSorter>
+                                </th>
+                                <th style="width: 20%">
+                                    <mfDefaultSorter by="city">Block Hash</mfDefaultSorter>
+                                </th>
+                                <th style="width: 20%">
+                                    <mfDefaultSorter by="city">Transaction Hash</mfDefaultSorter>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of gf.data; let i=index">
+                                <td>{{i+1}}</td>
+                                <td class="requestid">{{data.event}}</td>
+                                <td class="elips">{{data.returnValues.id}}</td>
+                                <td class="app">{{data.returnValues.compeny_name}}</td>
+                                <td class="elips">{{data.returnValues.regby}}</td>
+                                <td class="elips">{{data.blockNumber}}</td>
+                                <td class="elips">{{data.blockHash}}</td>
+                                <td class="elips">{{data.transactionHash}}</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="fixed">
+                            <tr>
+                                <td colspan="10">
+                                    <mfBootstrapPaginator [rowsOnPageSet]="[10,20,30]"></mfBootstrapPaginator>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

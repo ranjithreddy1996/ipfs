@@ -1,0 +1,35 @@
+.dropdown-menu.show{
+    left: 35px !important;
+    box-shadow: none;
+    border: none;
+}
+.header.dt-header{
+    box-shadow: none !important;
+}
+.button1 {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin-left: 56px;
+    padding: 3px;
+
+    
+}
+.button1:focus,.button1:hover,.button1:active {
+    color: #6610f2 !important;
+
+}
+
+.notify-ico{
+    color: cornsilk;
+    position: absolute;
+    bottom: 49px;
+    margin-left: 19px;
+    background-color: red;
+    width: 20px;
+    z-index: 999;
+    height: 20px;
+    text-align: center;
+    border-radius: 19px;
+    font-weight: 500;
+}

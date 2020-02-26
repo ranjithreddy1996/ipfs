@@ -1,0 +1,16 @@
+.table thead th{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.serviceNavItems{
+    margin-right: 90px;
+  } 
+  .serviceNavItems.active {
+    color: #6610f2;
+    font-size: larger;
+    border: 2px solid #6610f2;
+    border-right-style: none;
+    border-top-style: none;
+    border-left-style: none;
+    cursor: pointer;
+  }  

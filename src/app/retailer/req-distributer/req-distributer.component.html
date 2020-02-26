@@ -1,0 +1,395 @@
+<!--first row-->
+<div class="clearfix">&nbsp;</div>
+<div class="card rows">
+    <div class="card-body">
+        <div class="clearfix">&nbsp;</div>
+        <div class="row rows">
+            <div class="col-md-8">
+                <button class="btn btn-rounded btn-md text-white mr-2" style="background-color: #6610f2;"
+                    (click)="openMediumModalPopup(requestfororders);clear(ServiceData)"
+                    title="click here for Registration"> Order For Product
+                    </button>
+                    <button class="btn btn-rounded btn-md text-white mr-2" style="background-color: #6610f2;"
+                    (click)="openMediumModalPopup(multipleorder);clear(ServiceData)"
+                    title="click here for Registration"> Order For Multiple Product
+                    </button>
+                    <button class="btn btn-rounded btn-md text-white mr-2" style="background-color: #6610f2;"
+                    (click)="openMediumModalPopup(changeinquantity);sclear(ServiceDat)"
+                    title="click here for Registration"> Modification in Quantity
+                    </button>
+           
+            </div>
+            <div class="col-md-4">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <!-- <input type="text" [(ngModel)]="searchText" class="form-control btn-radius"
+                        placeholder="Search By category"> -->
+                </div>
+            </div>
+        </div>
+        <!--second row-->
+        <div class="row">
+            <!--Pagination-->
+            <!-- <div class="col-md-8">
+                            <ul *ngIf="pager.pages && pager.pages.length" class="pagination upper">
+                                <li class="pageItemRight" [ngClass]="{disabled:pager.currentPage === 1}">
+                                    <a class="page-link" aria-label="Previous" (click)="setPage(pager.currentPage - 1)"
+                                        style="font-size: 12px;">&#8592;&nbsp;&nbsp;&nbsp;Previous</a>
+                                </li>
+                                <span class="countofPages">{{pager.currentPage}}&nbsp;&nbsp;/&nbsp;&nbsp;{{pager.totalPages}}</span>
+                                <li class="pageItemLeft" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                                    <a class="page-link" aria-label="Next" (click)="setPage(pager.currentPage + 1)"
+                                        style="font-size: 12px;">&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;&#8594;</a>
+                                </li>
+                            </ul>
+                        </div> -->
+        </div>
+        <div class="clearfix">&nbsp;</div>
+        <!--this is for no data found table-->
+        <div class="row">
+            <div class="col-md-12 text-center middle">
+                <!-- <div *ngIf="show==true">
+                    <img src="assets/images/img_empty_statues.png" class="nodataimage" alt="No Data Image">
+                    <h4>{{tabledatanotfound}}</h4>
+                </div> -->
+            </div>
+        </div>
+        <!--Index list of Sub category names view-->
+        <div class="clearfix">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th class="text-white">S.No</th>
+                               
+                                <th class="text-white">Distributer Id</th>
+                                                          
+                                <th class="text-white">Product Id</th>
+                                <th class="text-white">Product Name</th>
+                                <th class="text-white">Quantity</th>
+                                
+      
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of reqmaterial; let i=index">
+                                <td>{{i+1}}</td>
+                                <td class="elips">{{data.returnValues.distributerID}}</td>
+                                <td class="app">{{data.returnValues.productID}}</td>
+                                <td class="elips">{{data.returnValues.productname}}</td>
+                                <td class="elips">{{data.returnValues.quantity}}</td>
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- <button (click)="delete($event)">Delete</button> -->
+        <!--adding spa category modal popup-->
+        <ng-template #requestfororders let-c="close" let-d="dismiss">
+            <div class="modal-content">
+        
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <h4 class="text-center font-medium text-dark">Order For Product</h4>
+                        <!-- addingUniversity(ServiceData)" -->
+                        <form #universityForm="ngForm" (ngSubmit)="universityForm.form.valid" >
+                                <div class=" row">
+                            <!--Category Name-->
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="regsiterdistributerid">Distributer ID</label>
+                                    <input type="text" id="regsiterdistributerid" name="distributerid"
+                                        placeholder="Distributer ID" class="form-control form_color"
+                                        [(ngModel)]="ServiceData.distributerID" #distributerid="ngModel"
+                                        [ngClass]="{'is-invalid': universityForm.submitted && distributerid.invalid}"
+                                        required />
+                                    <div class="invalid-feedback" *ngIf="universityForm.submitted && distributerid.invalid">
+                                        <div *ngIf="distributerid.errors.required">Distributer ID is Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="regsiterproductid">Product Id</label>
+                                    <input type="text" id="regsiterproductid" name="productid"
+                                        placeholder="Product ID" class="form-control form_color"
+                                        [(ngModel)]="ServiceData.productID" #productid="ngModel"
+                                        [ngClass]="{'is-invalid': universityForm.submitted && productid.invalid}"
+                                        required />
+                                    <div class="invalid-feedback" *ngIf="universityForm.submitted && productid.invalid">
+                                        <div *ngIf="productid.errors.required">Product Id is Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="registerproduct">Product Name</label>
+                                    <input type="text" id="registerproduct" name="productname" placeholder="Product name"
+                                        class="form-control form_color" [(ngModel)]="ServiceData.productname" #productname="ngModel"
+                                        [ngClass]="{'is-invalid': universityForm.submitted && productname.invalid}" required />
+                                    <div class="invalid-feedback" *ngIf="universityForm.submitted && productname.invalid">
+                                        <div *ngIf="productname.errors.required">Product Name is Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="registerquantity">Quantity</label>
+                                    <input type="text" id="registerquantity" name="quantity" placeholder="Quantity"
+                                        class="form-control form_color" [(ngModel)]="ServiceData.quantity" #quantity="ngModel"
+                                        [ngClass]="{'is-invalid': universityForm.submitted && quantity.invalid}" required />
+                                    <div class="invalid-feedback" *ngIf="universityForm.submitted && quantity.invalid">
+                                        <div *ngIf="quantity.errors.required">Quantity field is Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="registerStatus">Supplier status</label>
+                                    <input type="text" id="registerStatus" name="status" placeholder="Supplier"
+                                        class="form-control form_color" [(ngModel)]="ServiceData.status" #status="ngModel"
+                                        [ngClass]="{'is-invalid': universityForm.submitted && status.invalid}" required />
+                                    <div class="invalid-feedback" *ngIf="universityForm.submitted && status.invalid">
+                                        <div *ngIf="status.errors.required">Supplier status is Required</div>
+                                    </div>
+                                </div>
+                            </div> -->
+        
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <!-- <span class="text-danger">{{addingError}}</span> -->
+                    </div>
+                    <!--Modal footer for In Room dining editing-->
+                    <div class="modal-footer">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-rounded btn-save text-white"
+                                *ngIf="universityForm.form.invalid">Submit</button>&nbsp;&nbsp;
+                            <button type="submit" class="btn btn-rounded btn-save text-white" *ngIf="universityForm.form.valid"
+                                (click)="closing();openMediumModalPopup(confirm);">Submit</button>&nbsp;&nbsp;
+                            <button type="reset" class="btn btn-rounded btn-cancel text-white"
+                                (click)="d('Cross click');clear(ServiceData)"  data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    </form>
+            </div>
+                </div>
+            </div>
+    <!--Accepting confirmation popup-->
+<ng-template #confirm let-c="close" let-d="dismiss">
+        <div class="clearfix">&nbsp;</div>
+        <div class="clearfix">&nbsp;</div>
+        <h6 class="text-center font-light smallPopups">Are you sure want to Submit the Form &#63;</h6>
+        <div class="modal-body">
+            <div class="clearfix">&nbsp;</div>
+            <div class="text-center">
+                <button class="btn btn-rounded btn-save text-white" style="width: 65px;"
+                    (click)="oreder(ServiceData)">Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-rounded btn-cancel text-white" style="width: 65px;" (click)="d('Cross click')"> No </button>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+        </div>
+    </ng-template>
+    </ng-template>
+    
+    <ng-template #changeinquantity let-c="close" let-d="dismiss">
+        <div class="modal-content">
+    
+            <div class="modal-body">
+                <div class="modal-body">
+                    <h4 class="text-center font-medium text-dark">Order For Material</h4>
+                    <!-- addingUniversity(ServiceData)" -->
+                    <form #universityForm="ngForm" (ngSubmit)="universityForm.form.valid" >
+                            <div class=" row">
+                        <!--Category Name-->
+                        
+                      
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="regsiterrquestid">Request Id</label>
+                                <input type="text" id="regsiterrquestid" name="rquestid"
+                                    placeholder="Product ID" class="form-control form_color"
+                                    [(ngModel)]="ServiceDat.rquestid" #rquestid="ngModel"
+                                    [ngClass]="{'is-invalid': universityForm.submitted && rquestid.invalid}"
+                                    required />
+                                <div class="invalid-feedback" *ngIf="universityForm.submitted && rquestid.invalid">
+                                    <div *ngIf="rquestid.errors.required">Product Id is Required</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="registerquantity">Quantity</label>
+                                <input type="text" id="registerquantity" name="quantity" placeholder="Quantity"
+                                    class="form-control form_color" [(ngModel)]="ServiceDat.quantity" #quantity="ngModel"
+                                    [ngClass]="{'is-invalid': universityForm.submitted && quantity.invalid}" required />
+                                <div class="invalid-feedback" *ngIf="universityForm.submitted && quantity.invalid">
+                                    <div *ngIf="quantity.errors.required">Quantity field is Required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="registerStatus">Supplier status</label>
+                                <input type="text" id="registerStatus" name="status" placeholder="Supplier"
+                                    class="form-control form_color" [(ngModel)]="ServiceData.status" #status="ngModel"
+                                    [ngClass]="{'is-invalid': universityForm.submitted && status.invalid}" required />
+                                <div class="invalid-feedback" *ngIf="universityForm.submitted && status.invalid">
+                                    <div *ngIf="status.errors.required">Supplier status is Required</div>
+                                </div>
+                            </div>
+                        </div> -->
+    
+                </div>
+                <div class="col-md-12 text-center">
+                    <!-- <span class="text-danger">{{addingError}}</span> -->
+                </div>
+                <!--Modal footer for In Room dining editing-->
+                <div class="modal-footer">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-rounded btn-save text-white"
+                            *ngIf="universityForm.form.invalid">Submit</button>&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-rounded btn-save text-white" *ngIf="universityForm.form.valid"
+                            (click)="closing();openMediumModalPopup(confirm);">Submit</button>&nbsp;&nbsp;
+                        <button type="reset" class="btn btn-rounded btn-cancel text-white"
+                            (click)="d('Cross click');clear(ServiceData)"  data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                </form>
+        </div>
+            </div>
+        </div>
+<!--Accepting confirmation popup-->
+<ng-template #confirm let-c="close" let-d="dismiss">
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+    <h6 class="text-center font-light smallPopups">Are you sure want to Submit the Form &#63;</h6>
+    <div class="modal-body">
+        <div class="clearfix">&nbsp;</div>
+        <div class="text-center">
+            <button class="btn btn-rounded btn-save text-white" style="width: 65px;"
+                (click)="increaseinquantity(ServiceDat)">Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-rounded btn-cancel text-white" style="width: 65px;" (click)="d('Cross click')"> No </button>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+    </div>
+</ng-template>
+</ng-template>
+    <ng-template #multipleorder let-c="close" let-d="dismiss">
+        <div class="modal-content">
+    
+            <div class="modal-body">
+                <div class="modal-body">
+                    <h4 class="text-center font-medium text-dark">Order For Material</h4>
+                    <form #universityForm="ngForm" (ngSubmit)="universityForm.form.valid" >
+                            <div class=" row">
+                      
+                             
+            <div class="row mt-5">
+                <div class="col-8">
+                    <div class="mb-2"  id="all1">Upload FILE</div>
+                    <div  id="all">You will be able to preview the list in the next step</div>
+                     <div class="col-4  ">
+                    <div id="fileInput" class="pl-4 py-2">
+               
+                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                        <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx">
+                        
+                        </div>
+
+                        <!-- <div class="pt-5 mr-4"  *ngIf=incomingfile style="margin-left: auto;"><button class="btn btn-primary" style="background-color: rgb(175, 111, 33)"data-toggle="modal" data-target="#exampleModalCenter" (click)="viewtable()" >View</button></div> -->
+                    </div> 
+                    
+                    
+                </div>
+    
+            </div>
+             
+                            
+    
+                </div>
+                <div class="col-md-12 text-center">
+                    <!-- <span class="text-danger">{{addingError}}</span> -->
+                </div>
+                <!--Modal footer for In Room dining editing-->
+                <div class="modal-footer">
+                    <div class="col-md-12 text-center">
+                        <button class="btn btn-rounded  btn-cancel text-white" data-toggle="modal" data-target="#exampleModalCenter" (click)="viewtable()" >View</button>
+                       &nbsp;&nbsp;
+                       <div class="modal" tabindex="-1" role="dialog" id="exampleModalCenter" *ngIf="table1">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content" style="    width: 216%; margin-left: -51%;     ">
+                            <div class="modal-header" style="border-bottom: 0px;">
+                         
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="card" style="padding: 10px;"> 
+                                                                <table class="table  table-hover"  style="background-color: white;">
+                                          <thead class="thead-light">
+                                            <tr>
+                                                    
+                                                
+                                               <th>Retailer ID</th>
+                                              <th>Distributer ID</th>
+                                              <th>Product ID</th>
+                                              <th>Product Name</th>
+                                          
+                                              <th>Quantity</th>
+                                              
+                                             
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr *ngFor="let arrayres of alldata" id="hidethis">
+                                                  <td>{{arrayres.retailerid}}</td>
+                                                  <td >{{arrayres.distributerid}}</td>
+                                                  <td>{{arrayres.productid}}</td>
+                                                  <td>{{arrayres.productname}}</td>
+                                                 
+                                                  <td>{{arrayres.quantity}}</td>
+                                                 
+                                               
+                                                 
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                            </div>
+                            <div class="modal-footer" style="border-top: 0px;">
+                                <div class="pt-5 mr-4" *ngIf=table1  style="margin-left: auto;"><span></span>&nbsp;&nbsp;<button class="btn btn-primary" data-toggle="modal" data-target="#mulitiplesu1" (click)="verify()">Submit</button>&nbsp;&nbsp;
+                                    <button type="reset" class="btn btn-rounded btn-cancel text-white"
+                                    data-dismiss="modal">Cancel</button>
+                                </div>
+              
+              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                        <button type="reset" class="btn btn-rounded btn-cancel text-white"
+                              data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                </form>
+        </div>
+            </div>
+        </div>
+
+</ng-template>
+
+
+
+</div>
+
+</div>

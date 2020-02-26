@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url("../../assets/css/semidark-style-1.min.css"); */
+/* @import url("./assets/fonts/noir-pro"); */
+@import '~bootstrap/dist/css/bootstrap.min.css';   
+
+body{
+    overflow: auto !important;
+}
+.has-search .form-control {
+    padding-left: 3.375rem;
+    margin-bottom: -1.3rem;
+    border-radius: -10px;
+  }
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 4.365rem;
+    text-align: center;
+    pointer-events: none;
+    color: #646058;
+  }
+  .btn-save{
+      background-color: #6610f2 !important;
+      color: white;
+      padding: .55rem 2rem !important;
+  }
+  .btn-cancel{
+      background-color: #707070 !important;
+      color: whitesmoke;
+      padding: .55rem 1.5rem !important;
+  }
+  .dt-side-nav__link[_ngcontent-mex-c1]:hover, .dt-side-nav__link[_ngcontent-mex-c1]:focus, .dt-side-nav__link[_ngcontent-mex-c1]:active{
+      color: #6610f2 !important;
+      border: 2px solid red;
+  }
+ 
+
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.btn-next{
+    padding: 0.55rem 2rem !important;
+    background-color: #6610f2 !important;
+    color: white !important;
+}
+@import '~bootstrap/dist/css/bootstrap.min.css';   
+
+/* 
+.overlay {
+
+    margin-left: 34% !important;
+    margin-top: 10% !important;
+    width: 37% !important;
+    height: 72% !important;
+
+} */

@@ -1,0 +1,739 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "deletecandidates",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_eadmin",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_epassword",
+				"type": "uint256"
+			}
+		],
+		"name": "deleteuser",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_compeny_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_regby",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_mail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_mobile_number",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_homeaddress",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_city",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_status",
+				"type": "uint256"
+			}
+		],
+		"name": "register",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "reqno",
+				"type": "uint256"
+			}
+		],
+		"name": "rejectreqform",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_compeny_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_reqid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_mail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_mobile_number",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_haddress",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_city",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_username",
+				"type": "string"
+			}
+		],
+		"name": "reqform",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_eadmin",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_epassword",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_newadmin",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_ephoneno",
+				"type": "uint256"
+			}
+		],
+		"name": "transferownership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_admin",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_password",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_newpassword",
+				"type": "uint256"
+			}
+		],
+		"name": "updatepassword",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_password",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_newpassword",
+				"type": "uint256"
+			}
+		],
+		"name": "updatepasswordcandidate",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_Admin",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_password",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_Phoneno",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "compeny_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "regby",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "mail",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "mobile_number",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "homeaddress",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum Admin.st",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"name": "Supplier",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "compeny_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "regby",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "mail",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "mobile_number",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "homeaddress",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum Admin.st",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"name": "Manufacture",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "compeny_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "regby",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "mail",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "mobile_number",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "homeaddress",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum Admin.st",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"name": "Distributer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "compeny_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "regby",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "mail",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "mobile_number",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "homeaddress",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum Admin.st",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"name": "Retailer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "compeny_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "reqno",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "reqid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "mail",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "mobile_number",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "haddress",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "username",
+				"type": "string"
+			}
+		],
+		"name": "reqregistration",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "admin",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "apassword",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "aphonenumber",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_epassword",
+				"type": "uint256"
+			}
+		],
+		"name": "login",
+		"outputs": [
+			{
+				"internalType": "enum Admin.st",
+				"name": "",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "request",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "compeny_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reqno",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "reqid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "mail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "mobile_number",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "haddress",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "username",
+				"type": "string"
+			},
+			{
+				"internalType": "enum Admin.st",
+				"name": "status",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "rr",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "compeny_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "regby",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "password",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "mail",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "mobile_number",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "homeaddress",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"internalType": "enum Admin.st",
+				"name": "status",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

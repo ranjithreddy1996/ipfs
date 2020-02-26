@@ -1,0 +1,350 @@
+
+
+.card {
+    border: none;
+    /* box-shadow: 0 0 30px 0 rgba(200, 200, 200, 0.2); */
+  }
+  
+  .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+  }
+  
+  .text-primary {
+    color: #512da8 !important;
+  }
+  
+  .text-muted {
+    color:black !important;
+  
+  
+  }
+  
+  #new:hover{
+    width:103%;
+        color: #512da8 !important;
+  
+  }
+  .xp-widget-icon-bg {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .bg-primary-rgba {
+    background-color: rgba(76, 124, 243, 0.3) !important;
+  }
+  
+  .font-30 {
+    font-size: 30px;
+  }
+  
+  .dashboard{
+    width: 77%;
+    margin: auto;
+    padding: 2%;
+    border-left: 3px solid #512da8;
+    margin-top: 20%;
+  }
+  
+  .dashboard1{
+    width: 80%;
+    margin: auto;
+    padding: 2%;
+    border-left: 3px solid #512da8;
+    margin-top: 10%;
+  }
+  
+  .profile-page .profile-header {
+    position: relative;
+  }
+  
+  .card .body {
+    font-size: 14px;
+    color: #424242;
+    padding: 20px;
+    font-weight: 400;
+  }
+  
+  .profile-page .profile-header .profile-image img {
+    border-radius: 50%;
+    width: 180px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  img {
+    max-width: 100%;
+    border-radius: 1px;
+  }
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+  
+  b, strong {
+    font-weight: 400;
+    font-size: 17px
+  }
+  
+  .m-b-10, .sidebar .user-info .detail, .weather .city, .top-report .progress, .w_calender ul:nth-of-type(6), .profile-page .profile-header .job_post {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    line-height: 1.61em;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .theme-cyan .btn-primary {
+    background: #512da8;
+  }
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+  }
+  .btn-round {
+    border-width: 1px;
+    border-radius: 30px !important;
+    padding: 11px 23px;
+  }
+  .btn-primary {
+    background-color: #f96332;
+    color: #fff;
+  }
+  .btn, .navbar .navbar-nav>a.btn {
+    border-width: 2px;
+    font-weight: 400;
+    font-size: .8571em;
+    line-height: 1.35em;
+    margin: 5px 1px;
+    border: none;
+    border-radius: .1875rem;
+    padding: 11px 22px;
+    cursor: pointer;
+    background-color: #888;
+    color: #fff;
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .theme-cyan .btn-primary .btn-simple {
+    border-color: #512da8;
+    color: #512da8;
+    background: transparent;
+  }
+  .theme-cyan .btn-primary {
+    background: #512da8;
+  }
+  .btn-round .btn-simple {
+    padding: 10px 22px;
+  }
+  .btn-primary .btn-simple {
+    color: #f96332;
+    border-color: #f96332;
+  }
+  .btn-simple {
+    color: #888;
+    border-color: #888;
+  }
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+  }
+  .btn-simple {
+    border: 1px solid;
+    border-color: #888;
+    padding: 10px 22px;
+    background-color: rgba(0,0,0,0);
+  }
+  .btn-round {
+    border-width: 1px;
+    border-radius: 30px !important;
+    padding: 11px 23px;
+  }
+  .btn-primary1 {
+  
+    color: #f96332;
+  }
+  
+  .users_name {
+    margin-top: 5px;
+  }
+  
+  .social-icon a {
+    margin: 0 5px;
+  }
+  button, input, select, a {
+    outline: none !important;
+  }
+  
+  a {
+    color: #f96332 !important;
+  }
+  
+  .social-icon a{
+    margin: 0 5px;
+  }
+  
+  button, input, select, a {
+    outline: none !important;
+  }
+  
+  .btn-primary {
+    background: #512da8 !important;
+  }
+  
+  .btn-round{
+    border-width: 1px;
+    border-radius: 30px !important;
+    padding: 11px 23px;
+  }
+  
+  .image_for_circle{
+    border-radius: 50% !important;
+    width: 34%;
+    height: 92px;
+    border: 3px solid #fff !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+  }
+  
+  .btn-simple1{
+  
+        border-color: #512da8 !important;
+        color: #512da8 !important;
+        background: transparent;
+    border: 1px solid #512da8;
+    }
+  
+  .profile_card{
+    width: 72%;
+    margin: auto;
+  
+  }
+  
+  .dashboard_fomnt{
+    font-weight: 300;
+    color: darkblue;
+    text-shadow: 1px 1px #512da8;
+  
+  }
+  
+  
+  .vbit{
+    position: relative;
+    left: -8px;
+  }
+  
+  .cmp{
+    padding-left: 71px;
+  }
+  
+  .phone{
+    padding-left: 45px;
+  }
+  
+  .f-400{
+    font-weight: 400;
+  }
+  
+  /* ygghghg */
+  .content-panel {
+    background: #ffffff;
+    /* box-shadow: 0px 3px 2px #aab2bd; */
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border: 0px;
+  }
+  
+  .mb {
+    margin-bottom: 25px;
+  }
+  .mt {
+    margin-top: 25px;
+  }
+  .centered {
+    text-align: center;
+  }
+  
+  .right-divider {
+    border-right: 1px solid #d3d3d3;
+    height: 100%;
+  }
+  
+  .profile-text h4 {
+    color: #512da8;
+  }
+  .content-panel h4 {
+    margin-left: 10px;
+  }
+  .h4, h4 {
+    font-size: 18px;
+  }
+  
+  .profile-text h6 {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #d3d3d3;
+  }
+  .h6, h6 {
+    font-size: 12px;
+  }
+  
+  .profile-text h3 {
+    font-weight: 500;
+    color: #512da8;
+  }
+  
+  
+  .btn-theme {
+    color: #fff;
+    background-color: #512da8;
+    border-color: #512da8;
+  }
+  
+  /* .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } */
+  
+  .centered {
+    text-align: center;
+  }
+  
+  .profile-pic img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 10px solid #f1f2f7;
+    margin-top: 20px;
+  }
+  .img-circle {
+    border-radius: 50%;
+  }
+  img {
+    vertical-align: middle;
+  }
+  
+  .btn-theme {
+    color: #fff;
+    background-color: #512da8;
+    border-color: #512da8;
+  }
+  
+  
+  .btn-theme02 {
+    color: #fff;
+    background-color: #ac92ec;
+    border-color: #967adc;
+  }

@@ -1,0 +1,269 @@
+<!--first row-->
+<div class="clearfix">&nbsp;</div>
+<div class="card rows">
+    <div class="card-body">
+        <div class="clearfix">&nbsp;</div>
+        <div class="row rows">
+            <div class="col-md-6">
+                <button class="btn btn-rounded btn-md text-white mr-2" style="background-color: #6610f2;"
+                    (click)="openMediumModalPopup(addproducts);clear(ServiceData)"
+                    title="click here for Registration">Received Material
+                </button>
+
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <!-- <input type="text" [(ngModel)]="searchText" class="form-control btn-radius"
+                        placeholder="Search By category"> -->
+                </div>
+            </div>
+        </div>
+        <!--second row-->
+        <div class="row">
+
+        </div>
+        <div class="clearfix">&nbsp;</div>
+        <!--this is for no data found table-->
+        <div class="row">
+            <div class="col-md-12 text-center middle">
+                <!-- <div *ngIf="show==true">
+                    <img src="assets/images/img_empty_statues.png" class="nodataimage" alt="No Data Image">
+                    <h4>{{tabledatanotfound}}</h4>
+                </div> -->
+            </div>
+        </div>
+        <!--Index list of Sub category names view-->
+        <div class="clearfix">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th class="text-white">S.No</th>
+                                <th class="text-white">Request Id</th>
+
+                                <th class="text-white">Supplier Id</th>
+                                <th class="text-white">Material Id</th>
+                                <th class="text-white">Material Name</th>
+                                <th class="text-white">Quantity</th>
+                                <th class="text-white">Invoice / Received</th>
+                                <th class="text-white">Payment</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of matid; let i=index">
+                                <td>{{i+1}}</td>
+                                <!-- <td class="elips">{{data[0]}}</td> -->
+                                <td class="requestid" (click)="row($event)"><u style="color: #ff701d95;">{{data[0]}}</u>
+                                </td>
+                                <td class="elips">{{data[2]}}</td>
+                                <td class="elips">{{data[3]}}</td>
+                                <td class="elips">{{data[4]}}</td>
+                                <td class="elips">{{data[5]}}</td>
+                                <td><button (click)="get($event)">Invoice</button><button
+                                        (click)="receivedside($event)">Received</button></td>
+                                <td><button (click)="pay($event)">Pay</button></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--adding spa category modal popup-->
+        <ng-template #addproducts let-c="close" let-d="dismiss">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <h4 class="text-center font-medium text-dark"> Materials Received</h4>
+                        <!-- addingUniversity(ServiceData)" -->
+                        <form #universityForm="ngForm" (ngSubmit)="universityForm.form.valid">
+                            <div class=" row">
+                                <!--Category Name-->
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="regsiterrequestid">Requestid Id</label>
+                                        <input type="text" id="regsiterrequestid" name="requestid"
+                                            placeholder="Request ID" class="form-control form_color"
+                                            [(ngModel)]="ServiceData.requestid" #requestid="ngModel"
+                                            [ngClass]="{'is-invalid': universityForm.submitted && requestid.invalid}"
+                                            required />
+                                        <div class="invalid-feedback"
+                                            *ngIf="universityForm.submitted && requestid.invalid">
+                                            <div *ngIf="requestid.errors.required"> Id is Required</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <!-- <span class="text-danger">{{addingError}}</span> -->
+                            </div>
+                            <!--Modal footer for In Room dining editing-->
+                            <div class="modal-footer">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-rounded btn-save text-white"
+                                        *ngIf="universityForm.form.invalid">Submit</button>&nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-rounded btn-save text-white"
+                                        *ngIf="universityForm.form.valid"
+                                        (click)="closing();openMediumModalPopup(confirm);">Submit</button>&nbsp;&nbsp;
+                                    <button type="reset" class="btn btn-rounded btn-cancel text-white"
+                                        (click)="d('Cross click');clear(ServiceData)"
+                                        data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Accepting confirmation popup-->
+            <ng-template #confirm let-c="close" let-d="dismiss">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <h6 class="text-center font-light smallPopups">Are you sure want to Submit the Form &#63;</h6>
+                <div class="modal-body">
+                    <div class="clearfix">&nbsp;</div>
+                    <div class="text-center">
+                        <button class="btn btn-rounded btn-save text-white" style="width: 65px;"
+                            (click)="received(ServiceData)">Yes</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-rounded btn-cancel text-white" style="width: 65px;"
+                            (click)="d('Cross click')"> No </button>
+                    </div>
+                    <div class="clearfix">&nbsp;</div>
+                </div>
+            </ng-template>
+        </ng-template>
+
+
+    </div>
+
+</div>
+
+
+<div class="modal" aria-labelledby="exampleModalLabel" aria-hidden="true" tabindex="-1" role="dialog"
+    [ngStyle]="{'display':display}" style="margin-top: 6.5%">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="pdff2">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel" style="    margin: auto;">INVOICE</h4>
+                </div>
+                <div class="invoice-box">
+                    <table cellpadding="0" cellspacing="0">
+
+                        <tr class="top">
+                            <td colspan="2">
+                                <table>
+                                    <tr>
+                                        <td class="title">
+                                            <img src="../../../assets/upsteer.png" style="width:100%; max-width:300px;">
+                                        </td>
+
+                                        <td>
+                                            Invoice #: 123<br>
+                                            Created: January 1, 2015<br>
+                                            Due: February 1, 2015
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr class="information">
+                            <td colspan="2">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Sparksuite, Inc.<br>
+                                            12345 Sunny Road<br>
+                                            Sunnyville, CA 12345
+                                        </td>
+
+                                        <td>
+                                            Acme Corp.<br>
+                                            John Doe<br>
+                                            john@example.com
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr class="heading">
+                            <td>
+                                Payment Method
+                            </td>
+
+                            <td>
+                                Check #
+                            </td>
+                        </tr>
+
+                        <tr class="details">
+                            <td>
+                                Check
+                            </td>
+
+                            <td>
+                                1000
+                            </td>
+                        </tr>
+
+                        <tr class="heading">
+                            <td>
+                                Item
+                            </td>
+
+                            <td>
+                                Price
+                            </td>
+                        </tr>
+
+
+
+
+
+                        <tr class="item last">
+                            <td>
+                                <!-- {{this.materialname}} -->
+                            </td>
+
+                            <td>
+                                <!-- {{this.cost}} -->
+                            </td>
+                        </tr>
+
+                        <tr class="total">
+                            <td></td>
+
+                            <td>
+                                <!-- Total: {{this.totalcost}} -->
+                            </td>
+                        </tr>
+                    </table>
+
+
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button mat-raised-button color="accent" data-dismiss="modal" style="margin-right: 25px;"
+                    (click)="pdf2();onCloseHandled()">DOWNLOAD</button>
+
+                <!-- <button mat-raised-button color="accent" data-dismiss="modal" style="margin-right: 25px;" (click)="pdf2();onCloseHandled()">PRINT</button> -->
+                <button [useExistingCss]="true" printSectionId="pdff2" (click)="onCloseHandled()"
+                    ngxPrint>Print</button>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="clearfix">&nbsp;</div>
+<div class="card rows">
+    <div class="card-body">
+            <div class="clearfix">&nbsp;</div>
+            <div class="container-fluid">
+              <!--first row-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="d-flex mb-3">
+                    <div class="tab-requests--nav">
+                      <ul class="nav nav-sidebar side_nav" role="tablist">
+                        <li style="cursor: pointer;" (click)="selectedwallet = wallet" *ngFor="let wallet of coinwallet; let first = first; let last = last"
+                          [class.first-item]="first" [class.last-item]="last" role="presentation"
+                          class="serviceNavItems flex-fill font-medium text-center" [class.active]="selectedwallet===wallet">
+                          <a (click)="selectedwallet = wallet" aria-controls="one" role="tab" data-toggle="tab">{{wallet}}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-content">
+                   <div *ngIf="selectedwallet === coinwallet[0]" role="tabpanel" class="tab-pane active" id="one">
+                      <app-transaction-list></app-transaction-list>
+                  </div>
+                 
+                  <div *ngIf="selectedwallet === coinwallet[1]" role="tabpanel" class="tab-pane active" id="two">
+                       <app-manufacture-list></app-manufacture-list>
+                   </div>
+                    <div *ngIf="selectedwallet === coinwallet[2]" role="tabpanel" class="tab-pane active" id="three">
+                        <app-distributer-list></app-distributer-list>
+                    </div>
+                    <div *ngIf="selectedwallet === coinwallet[3]" role="tabpanel" class="tab-pane active" id="four">
+                        <app-retailer-list></app-retailer-list>
+                    </div>
+                   
+                                   
+                </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+           
+    </div>     
+</div>

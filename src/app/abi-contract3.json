@@ -1,0 +1,354 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_fromid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_toid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_productid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_typeofdamage",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_quantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_image",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_status",
+				"type": "uint256"
+			}
+		],
+		"name": "manufacture_at_damage",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "damageid",
+				"type": "uint256"
+			}
+		],
+		"name": "receiveddamagedistributer",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "damageid",
+				"type": "uint256"
+			}
+		],
+		"name": "receiveddamagemanufacture",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "damageid",
+				"type": "uint256"
+			}
+		],
+		"name": "receiveddamagesupplier",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_fromid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_toid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_materialid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_typeofdamage",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_quantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_image",
+				"type": "string"
+			}
+		],
+		"name": "supplier_damage",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "damageid",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "fromid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "toid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "materialid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "typeofdamage",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "image",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum Damage.st",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"name": "supplier_form_damage",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "damageid",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "fromid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "toid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "productid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "typeofdamage",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "image",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum Damage.st",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"name": "manufacture_damage",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "formdamage",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "damageid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "fromid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "toid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "materialid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "typeofdamage",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "image",
+				"type": "string"
+			},
+			{
+				"internalType": "enum Damage.st",
+				"name": "status",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "manudamage",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "damageid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "fromid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "toid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "typeofdamage",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "image",
+				"type": "string"
+			},
+			{
+				"internalType": "enum Damage.st",
+				"name": "status",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
