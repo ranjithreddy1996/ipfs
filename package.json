@@ -42,7 +42,7 @@
     "ipfs": "^0.32.3",
     "jquery": "^3.4.1",
     "jqwidgets-ng": "^9.0.0",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "jw-angular-pagination": "^1.1.0",
     "ng2-charts": "^2.3.0",
     "ngx-print": "^1.2.0-beta.3",
